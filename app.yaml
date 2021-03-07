@@ -5,18 +5,17 @@ automatic_scaling:
   max_instances: 1
 
 handlers:
-- url: .*
-  secure: always
-  script: auto
+  - url: .*
+    secure: always
+    script: auto
 
 env_variables:
-  CUSTOMCONNSTR_mongo: 'mongodb+srv://areef:Krokus@cluster0.ifgem.mongodb.net/test'
-  API_SECRET: '1234567890abc'
-  HOSTNAME: '0.0.0.0'
-  ENABLE: 'devicestatus rawbg upbat careportal iob profile cage bage avg cob basal treatments sage boluscalc pump openaps iage speech'
-  SHOW_PLUGINS: 'rawbg-on careportal upbat iob profile cage cob basal avg treatments boluscalc pump openaps iage speech'
-  DISPLAY_UNITS: 'mmol'
-  TIME_FORMAT: '24'
-  ALARM_TYPES: 'predict'
-  LANGUAGE: 'en'
-  BASE_URL: 'https://geneclinicx.el.r.appspot.com'
+  MONGO_CONNECTION: "mongodb+srv://areef:Krokus@cluster0.ifgem.mongodb.net/test"
+  API_SECRET: "genepathdiag"
+  DEVICESTATUS_ADVANCED: "true"
+  ENABLE: "careportal rawbg food sage"
+  DISABLE: "upbat"
+  DISPLAY: "unfiltered"
+  BG_TARGET_TOP: "140"
+  BG_TARGET_BOTTOM: "70"
+  BASE_URL: "https://geneclinicx.el.r.appspot.com"
